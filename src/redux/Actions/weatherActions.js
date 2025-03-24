@@ -22,7 +22,7 @@ export const fetchWeather = (lat, lon) => {
     
     try {
       
-      const apiKey = 'a1a69a2b21b44e899c1130301252403'; 
+      const apiKey = process.env.REACT_APP_WEATHER_API_KEY; 
       const response = await fetch(
         `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}&aqi=no`
       );
